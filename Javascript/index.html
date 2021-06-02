@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Javascript Challenge</title>
+    <style>
+        * {
+            font-family: sans-serif;
+            font-weight: 100;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+        #tasks {
+            margin-top: 50px;
+        }
+
+        li {
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="center-text" id="title"></h1>
+        <p class="center-text" id="location"></p>
+        <ul id="tasks"></ul>
+    </div>
+
+    <!--    Following the 3 instructions below, use Javascript to display the data on the page. -->
+
+    <!--    1. Populate the h1 with the main title data. -->
+    <!--    2. Populate the paragraph with the location data. -->
+    <!--    3. Populate the unordered list with each task and deadline -->
+
+    <script>
+        const data = {
+            title: 'Tasks for this year',
+            location: 'Charleston, SC',
+            tasks: [
+                {
+                    title: 'Heartwarming Soups and Stews',
+                    deadline: '05/10/2021',
+                },
+                {
+                    title: 'How to Use the Le Creuset Rice Pot',
+                    deadline: '07/21/2021',
+                },
+                {
+                    title: 'How To Clean Stainless Steel Cookware',
+                    deadline: '08/07/2021',
+                },
+                {
+                    title: '7 Ways to Use a Dutch Oven',
+                    deadline: '09/29/2021',
+                },
+            ],
+        };
+        document.getElementById('title').innerHTML = data.title;
+        document.getElementById('location').innerHTML = data.location;
+        document.getElementById('tasks').innerHTML = data.tasks.map(
+            (x) => `<li>${x.title} <br /> ${x.deadline}</li>`
+        );
+    </script>
+</body>
+
+</html>
