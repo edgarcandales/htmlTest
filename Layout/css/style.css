@@ -2,8 +2,6 @@ body h1 {
     font-size: 40px;
 }
 
-
-
 .section1 {
   display: flex;
   margin: 50px 100px 0 100px;
@@ -19,9 +17,23 @@ body h1 {
 .par1 {
   margin: 30px;
   width: 80%;
+  font-size: 16px;
 }
 
-/*Bottom Images*/
+@media only screen and (max-width: 600px) {
+    .section1 {       
+        margin: 50px 10px 0px 10px;
+    }
+  .par1{
+      height: 50px;
+    overflow: auto;
+    width: 100%;
+  }
+  
+}
+
+
+/*******************Bottom Images****************/
 
 .section2 {
   display: flex;
@@ -39,14 +51,25 @@ body h1 {
   margin: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+.section2 {
+  display: flex;
+  margin: 0 10px 0 10px;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+}
+
 /****************Section 3****************/
 
 .section3 {
   font-family: 'Roboto', sans-serif;
   display: flex;
-  margin: 50px 100px 50px 100px;
+  margin: 30px 10% 50px 10%;
   justify-content: space-between;
 }
+
+
 
 .imagesSec3 {
   position: relative;
@@ -70,4 +93,42 @@ body h1 {
 
 .linkMore {
   font-weight: bolder;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .section3{
+     
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     height:100%;
+    
+     
+  }
+  .imagesSec3 {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: 10px;
+  display: flex;
+    justify-content: center;
+     flex-direction: column;
+}
+
+.img1Section3 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 10px;
+}
+
+.img2Section3 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 10px;
+}
 }
